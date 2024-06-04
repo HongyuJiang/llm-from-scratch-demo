@@ -18,7 +18,7 @@ export LLM_API_KEY=<YOUR DEEPSEEK API KEY>
 export PYTHONPATH=$(pwd):$PYTHONPATH
 ```
 
-1. 初始化 Faiss 向量库, 仅当首次运行和 resource/qa 中文件有修改时需要重新运行，首次运行将下载预训练模型权重，时间较长。该步骤将对resouce/qa/下的所有文件根据不同类型进行向量化。目前已支持 txt、csv、md 三种类型。
+3. 初始化 Faiss 向量库, 仅当首次运行和 resource/qa 中文件有修改时需要重新运行，首次运行将下载预训练模型权重，时间较长。该步骤将对resouce/qa/下的所有文件根据不同类型进行向量化。目前已支持 txt、csv、md 三种类型。
 ```shell
 python retrieval/qa_embedding.py
 ```
