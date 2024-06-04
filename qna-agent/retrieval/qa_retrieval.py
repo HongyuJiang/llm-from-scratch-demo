@@ -70,6 +70,3 @@ def find_nearest(text: str, domain: str, threshold: float = 100):
     hits = [domain_data[i] for i, d in zip(I[0], D[0]) if d < threshold]
 
     return hits
-
-if __name__ == '__main__':
-    print(find_nearest('什么是对公存款', 'QA', 100))

@@ -31,7 +31,7 @@ class QnAStep:
             "candidates": intents_string
         }
 
-        prompt = self.prompt_processor.assemble('intent_identification', prompt_data)
+        prompt = self.prompt_processor.assemble('intent_identify', prompt_data)
         logger.debug(f'User intent prompt: {prompt}')
         answer = chat(prompt)
         logger.debug(f'User intent identified: {answer}')
