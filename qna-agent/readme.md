@@ -8,6 +8,7 @@
 ### 运行步骤
 
 1. 申请模型 API
+
 https://www.deepseek.com
 
 
@@ -17,7 +18,7 @@ export LLM_API_KEY=<YOUR DEEPSEEK API KEY>
 export PYTHONPATH=$(pwd):$PYTHONPATH
 ```
 
-3. 初始化 Faiss 向量库, 仅当首次运行和 resource/qa 中文件有修改时需要重新运行
+3. 初始化 Faiss 向量库, 仅当首次运行和 resource/qa 中文件有修改时需要重新运行，首次运行将下载预训练模型权重，时间较长。
 ```shell
 python retrieval/qa_embedding.py
 ```
