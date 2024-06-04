@@ -13,20 +13,9 @@ config.read(os.path.join(os.path.dirname(__file__), '../', 'config.ini'))
 
 # Load the sentence transformer model
 model = SentenceTransformer('aspire/acge_text_embedding')
+resource_path = os.path.join(os.path.dirname(__file__), '../')
 
 pairs = []
-resource_path = os.path.join(os.path.dirname(__file__), '../')
-with open(os.path.join(resource_path, './resource/pairs.csv'), 'r', encoding='utf-8', newline='') as file:
-    reader = csv.reader(file)
-    for row in reader:
-        domain, question, answer = row
-        pairs.append({
-            "domain": domain,
-            "question": question,
-            "answer": answer
-        })
-
-# Compute embeddings for questions and answers
 embeddings = []
 
 # 添加新的域 "QA" 并处理文本文件
